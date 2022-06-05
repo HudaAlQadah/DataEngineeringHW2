@@ -1,0 +1,58 @@
+[2022-06-03 21:43:09,981] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: UK_COVID19_dag.Install_dependecies 2022-06-03T21:43:00.669743+00:00 [None]>
+[2022-06-03 21:43:10,066] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: UK_COVID19_dag.Install_dependecies 2022-06-03T21:43:00.669743+00:00 [None]>
+[2022-06-03 21:43:10,068] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-03 21:43:10,069] {taskinstance.py:1043} INFO - Starting attempt 1 of 2
+[2022-06-03 21:43:10,071] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-03 21:43:10,102] {taskinstance.py:1063} INFO - Executing <Task(BashOperator): Install_dependecies> on 2022-06-03T21:43:00.669743+00:00
+[2022-06-03 21:43:10,110] {standard_task_runner.py:52} INFO - Started process 38 to run task
+[2022-06-03 21:43:10,142] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'UK_COVID19_dag', 'Install_dependecies', '2022-06-03T21:43:00.669743+00:00', '--job-id', '2', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/covid_dag-checkpoint.py', '--cfg-path', '/tmp/tmpo2cuhtnz', '--error-file', '/tmp/tmps9fgohxh']
+[2022-06-03 21:43:10,154] {standard_task_runner.py:77} INFO - Job 2: Subtask Install_dependecies
+[2022-06-03 21:43:11,980] {logging_mixin.py:104} INFO - Running <TaskInstance: UK_COVID19_dag.Install_dependecies 2022-06-03T21:43:00.669743+00:00 [running]> on host db1a6c3b41a0
+[2022-06-03 21:43:14,433] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Huda
+AIRFLOW_CTX_DAG_ID=UK_COVID19_dag
+AIRFLOW_CTX_TASK_ID=Install_dependecies
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-03T21:43:00.669743+00:00
+[2022-06-03 21:43:14,451] {bash.py:135} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-03 21:43:14,496] {bash.py:158} INFO - Running command: pip install sklearn matplotlib
+[2022-06-03 21:43:15,086] {bash.py:169} INFO - Output:
+[2022-06-03 21:43:19,956] {bash.py:173} INFO - WARNING: The directory '/home/airflow/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+[2022-06-03 21:43:19,964] {bash.py:173} INFO - Defaulting to user installation because normal site-packages is not writeable
+[2022-06-03 21:43:21,308] {bash.py:173} INFO - Collecting sklearn
+[2022-06-03 21:43:21,829] {bash.py:173} INFO -   Downloading sklearn-0.0.tar.gz (1.1 kB)
+[2022-06-03 21:43:26,446] {bash.py:173} INFO - Collecting matplotlib
+[2022-06-03 21:43:26,520] {bash.py:173} INFO -   Downloading matplotlib-3.3.4-cp36-cp36m-manylinux1_x86_64.whl (11.5 MB)
+[2022-06-03 21:43:30,777] {bash.py:173} INFO - Collecting scikit-learn
+[2022-06-03 21:43:30,945] {bash.py:173} INFO -   Downloading scikit_learn-0.24.2-cp36-cp36m-manylinux2010_x86_64.whl (22.2 MB)
+[2022-06-03 21:43:36,221] {bash.py:173} INFO - Collecting cycler>=0.10
+[2022-06-03 21:43:36,313] {bash.py:173} INFO -   Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+[2022-06-03 21:43:39,318] {bash.py:173} INFO - Collecting pillow>=6.2.0
+[2022-06-03 21:43:39,402] {bash.py:173} INFO -   Downloading Pillow-8.4.0-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+[2022-06-03 21:43:40,310] {bash.py:173} INFO - Requirement already satisfied: numpy>=1.15 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (1.19.5)
+[2022-06-03 21:43:40,324] {bash.py:173} INFO - Requirement already satisfied: python-dateutil>=2.1 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (2.8.1)
+[2022-06-03 21:43:40,338] {bash.py:173} INFO - Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (2.4.7)
+[2022-06-03 21:43:41,026] {bash.py:173} INFO - Collecting kiwisolver>=1.0.1
+[2022-06-03 21:43:41,117] {bash.py:173} INFO -   Downloading kiwisolver-1.3.1-cp36-cp36m-manylinux1_x86_64.whl (1.1 MB)
+[2022-06-03 21:43:43,606] {bash.py:173} INFO - Collecting scipy>=0.19.1
+[2022-06-03 21:43:43,696] {bash.py:173} INFO -   Downloading scipy-1.5.4-cp36-cp36m-manylinux1_x86_64.whl (25.9 MB)
+[2022-06-03 21:43:50,317] {bash.py:173} INFO - Collecting joblib>=0.11
+[2022-06-03 21:43:50,394] {bash.py:173} INFO -   Downloading joblib-1.1.0-py2.py3-none-any.whl (306 kB)
+[2022-06-03 21:43:50,734] {bash.py:173} INFO - Collecting threadpoolctl>=2.0.0
+[2022-06-03 21:43:50,808] {bash.py:173} INFO -   Downloading threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+[2022-06-03 21:43:51,105] {bash.py:173} INFO - Requirement already satisfied: six>=1.5 in /home/airflow/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib) (1.15.0)
+[2022-06-03 21:43:51,110] {bash.py:173} INFO - Building wheels for collected packages: sklearn
+[2022-06-03 21:43:51,136] {bash.py:173} INFO -   Building wheel for sklearn (setup.py): started
+[2022-06-03 21:43:53,860] {bash.py:173} INFO -   Building wheel for sklearn (setup.py): finished with status 'done'
+[2022-06-03 21:43:53,862] {bash.py:173} INFO -   Created wheel for sklearn: filename=sklearn-0.0-py2.py3-none-any.whl size=1309 sha256=54801c2b36bd9d043b4929151a706d481f33d0cd78f630163afee18b3d60e67b
+[2022-06-03 21:43:53,864] {bash.py:173} INFO -   Stored in directory: /tmp/pip-ephem-wheel-cache-3fb7689i/wheels/23/9d/42/5ec745cbbb17517000a53cecc49d6a865450d1f5cb16dc8a9c
+[2022-06-03 21:43:53,866] {bash.py:173} INFO - Successfully built sklearn
+[2022-06-03 21:44:10,983] {bash.py:173} INFO - Installing collected packages: scipy, joblib, threadpoolctl, scikit-learn, sklearn, cycler, pillow, kiwisolver, matplotlib
+[2022-06-03 21:44:29,803] {bash.py:173} INFO - Successfully installed cycler-0.11.0 joblib-1.1.0 kiwisolver-1.3.1 matplotlib-3.3.4 pillow-8.4.0 scikit-learn-0.24.2 scipy-1.5.4 sklearn-0.0 threadpoolctl-3.1.0
+[2022-06-03 21:44:30,394] {bash.py:173} INFO - WARNING: You are using pip version 20.2.4; however, version 21.3.1 is available.
+[2022-06-03 21:44:30,396] {bash.py:173} INFO - You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[2022-06-03 21:44:30,627] {bash.py:177} INFO - Command exited with return code 0
+[2022-06-03 21:44:30,691] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=UK_COVID19_dag, task_id=Install_dependecies, execution_date=20220603T214300, start_date=20220603T214309, end_date=20220603T214430
+[2022-06-03 21:44:30,782] {local_task_job.py:146} INFO - Task exited with return code 1

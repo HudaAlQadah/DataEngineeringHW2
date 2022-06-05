@@ -1,0 +1,69 @@
+[2022-06-03 21:44:01,053] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: UK_COVID19_dag.Install_dependecies 2022-06-03T21:43:20.220927+00:00 [None]>
+[2022-06-03 21:44:01,084] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: UK_COVID19_dag.Install_dependecies 2022-06-03T21:43:20.220927+00:00 [None]>
+[2022-06-03 21:44:01,088] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-03 21:44:01,093] {taskinstance.py:1043} INFO - Starting attempt 1 of 2
+[2022-06-03 21:44:01,095] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-03 21:44:01,142] {taskinstance.py:1063} INFO - Executing <Task(BashOperator): Install_dependecies> on 2022-06-03T21:43:20.220927+00:00
+[2022-06-03 21:44:01,181] {standard_task_runner.py:52} INFO - Started process 52 to run task
+[2022-06-03 21:44:01,252] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'UK_COVID19_dag', 'Install_dependecies', '2022-06-03T21:43:20.220927+00:00', '--job-id', '3', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/covid_dag-checkpoint.py', '--cfg-path', '/tmp/tmpo85r9926', '--error-file', '/tmp/tmpfztbp5qq']
+[2022-06-03 21:44:01,254] {standard_task_runner.py:77} INFO - Job 3: Subtask Install_dependecies
+[2022-06-03 21:44:01,644] {logging_mixin.py:104} INFO - Running <TaskInstance: UK_COVID19_dag.Install_dependecies 2022-06-03T21:43:20.220927+00:00 [running]> on host db1a6c3b41a0
+[2022-06-03 21:44:01,821] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Huda
+AIRFLOW_CTX_DAG_ID=UK_COVID19_dag
+AIRFLOW_CTX_TASK_ID=Install_dependecies
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-03T21:43:20.220927+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-03T21:43:20.220927+00:00
+[2022-06-03 21:44:01,842] {bash.py:135} INFO - Tmp dir root location: 
+ /tmp
+[2022-06-03 21:44:01,856] {bash.py:158} INFO - Running command: pip install sklearn matplotlib
+[2022-06-03 21:44:01,949] {bash.py:169} INFO - Output:
+[2022-06-03 21:44:05,363] {bash.py:173} INFO - WARNING: The directory '/home/airflow/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+[2022-06-03 21:44:05,372] {bash.py:173} INFO - Defaulting to user installation because normal site-packages is not writeable
+[2022-06-03 21:44:06,571] {bash.py:173} INFO - Collecting sklearn
+[2022-06-03 21:44:06,948] {bash.py:173} INFO -   Downloading sklearn-0.0.tar.gz (1.1 kB)
+[2022-06-03 21:44:11,630] {bash.py:173} INFO - Collecting matplotlib
+[2022-06-03 21:44:11,727] {bash.py:173} INFO -   Downloading matplotlib-3.3.4-cp36-cp36m-manylinux1_x86_64.whl (11.5 MB)
+[2022-06-03 21:44:16,163] {bash.py:173} INFO - Collecting scikit-learn
+[2022-06-03 21:44:16,237] {bash.py:173} INFO -   Downloading scikit_learn-0.24.2-cp36-cp36m-manylinux2010_x86_64.whl (22.2 MB)
+[2022-06-03 21:44:22,969] {bash.py:173} INFO - Collecting pillow>=6.2.0
+[2022-06-03 21:44:23,042] {bash.py:173} INFO -   Downloading Pillow-8.4.0-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+[2022-06-03 21:44:24,026] {bash.py:173} INFO - Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.3 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (2.4.7)
+[2022-06-03 21:44:24,509] {bash.py:173} INFO - Collecting kiwisolver>=1.0.1
+[2022-06-03 21:44:24,584] {bash.py:173} INFO -   Downloading kiwisolver-1.3.1-cp36-cp36m-manylinux1_x86_64.whl (1.1 MB)
+[2022-06-03 21:44:25,157] {bash.py:173} INFO - Collecting cycler>=0.10
+[2022-06-03 21:44:25,236] {bash.py:173} INFO -   Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+[2022-06-03 21:44:25,302] {bash.py:173} INFO - Requirement already satisfied: numpy>=1.15 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (1.19.5)
+[2022-06-03 21:44:25,310] {bash.py:173} INFO - Requirement already satisfied: python-dateutil>=2.1 in /home/airflow/.local/lib/python3.6/site-packages (from matplotlib) (2.8.1)
+[2022-06-03 21:44:25,381] {bash.py:173} INFO - Requirement already satisfied: threadpoolctl>=2.0.0 in /home/airflow/.local/lib/python3.6/site-packages (from scikit-learn->sklearn) (3.1.0)
+[2022-06-03 21:44:25,450] {bash.py:173} INFO - Requirement already satisfied: joblib>=0.11 in /home/airflow/.local/lib/python3.6/site-packages (from scikit-learn->sklearn) (1.1.0)
+[2022-06-03 21:44:25,527] {bash.py:173} INFO - Requirement already satisfied: scipy>=0.19.1 in /home/airflow/.local/lib/python3.6/site-packages (from scikit-learn->sklearn) (1.5.4)
+[2022-06-03 21:44:25,533] {bash.py:173} INFO - Requirement already satisfied: six>=1.5 in /home/airflow/.local/lib/python3.6/site-packages (from python-dateutil>=2.1->matplotlib) (1.15.0)
+[2022-06-03 21:44:25,539] {bash.py:173} INFO - Building wheels for collected packages: sklearn
+[2022-06-03 21:44:25,550] {bash.py:173} INFO -   Building wheel for sklearn (setup.py): started
+[2022-06-03 21:44:26,668] {bash.py:173} INFO -   Building wheel for sklearn (setup.py): finished with status 'done'
+[2022-06-03 21:44:26,684] {bash.py:173} INFO -   Created wheel for sklearn: filename=sklearn-0.0-py2.py3-none-any.whl size=1309 sha256=050d98263cae432d1e869a56b24d872b4720d3a6ac8939a07b8428fcc72c5922
+[2022-06-03 21:44:26,687] {bash.py:173} INFO -   Stored in directory: /tmp/pip-ephem-wheel-cache-0k2loxx6/wheels/23/9d/42/5ec745cbbb17517000a53cecc49d6a865450d1f5cb16dc8a9c
+[2022-06-03 21:44:26,693] {bash.py:173} INFO - Successfully built sklearn
+[2022-06-03 21:44:31,934] {local_task_job.py:188} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2022-06-03 21:44:31,941] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 52
+[2022-06-03 21:44:31,942] {taskinstance.py:1239} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-06-03 21:44:31,944] {bash.py:185} INFO - Sending SIGTERM signal to bash process group
+[2022-06-03 21:44:31,968] {taskinstance.py:1455} ERROR - Task received SIGTERM signal
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/bash.py", line 171, in execute
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1241, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-06-03 21:44:31,978] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=UK_COVID19_dag, task_id=Install_dependecies, execution_date=20220603T214320, start_date=20220603T214401, end_date=20220603T214431
+[2022-06-03 21:44:32,044] {process_utils.py:66} INFO - Process psutil.Process(pid=53, status='terminated', started='21:44:01') (53) terminated with exit code None
+[2022-06-03 21:44:32,048] {process_utils.py:66} INFO - Process psutil.Process(pid=52, status='terminated', exitcode=1, started='21:44:00') (52) terminated with exit code 1

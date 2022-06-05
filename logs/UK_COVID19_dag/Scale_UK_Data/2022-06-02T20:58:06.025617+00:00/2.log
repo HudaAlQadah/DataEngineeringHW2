@@ -1,0 +1,35 @@
+[2022-06-03 21:03:44,406] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: UK_COVID19_dag.Scale_UK_Data 2022-06-02T20:58:06.025617+00:00 [queued]>
+[2022-06-03 21:03:44,426] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: UK_COVID19_dag.Scale_UK_Data 2022-06-02T20:58:06.025617+00:00 [queued]>
+[2022-06-03 21:03:44,427] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-03 21:03:44,428] {taskinstance.py:1043} INFO - Starting attempt 2 of 2
+[2022-06-03 21:03:44,429] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-03 21:03:44,450] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): Scale_UK_Data> on 2022-06-02T20:58:06.025617+00:00
+[2022-06-03 21:03:44,458] {standard_task_runner.py:52} INFO - Started process 57 to run task
+[2022-06-03 21:03:44,476] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'UK_COVID19_dag', 'Scale_UK_Data', '2022-06-02T20:58:06.025617+00:00', '--job-id', '5', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/covid_dag-checkpoint.py', '--cfg-path', '/tmp/tmpahydrdi4', '--error-file', '/tmp/tmp9haqg9hf']
+[2022-06-03 21:03:44,478] {standard_task_runner.py:77} INFO - Job 5: Subtask Scale_UK_Data
+[2022-06-03 21:03:44,567] {logging_mixin.py:104} INFO - Running <TaskInstance: UK_COVID19_dag.Scale_UK_Data 2022-06-02T20:58:06.025617+00:00 [running]> on host 125d245880e1
+[2022-06-03 21:03:44,637] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Huda
+AIRFLOW_CTX_DAG_ID=UK_COVID19_dag
+AIRFLOW_CTX_TASK_ID=Scale_UK_Data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-02T20:58:06.025617+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-02T20:58:06.025617+00:00
+[2022-06-03 21:03:45,509] {taskinstance.py:1455} ERROR - name 'DF_UK_u_2' is not defined
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 117, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 128, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/covid_dag-checkpoint.py", line 65, in MinMaxScaler
+    DF_UK_3 = pd.DataFrame(min_max_scaler.fit_transform(DF_UK_u_2[Select_Columns]),columns=Select_Columns)
+NameError: name 'DF_UK_u_2' is not defined
+[2022-06-03 21:03:45,517] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=UK_COVID19_dag, task_id=Scale_UK_Data, execution_date=20220602T205806, start_date=20220603T210344, end_date=20220603T210345
+[2022-06-03 21:03:45,610] {local_task_job.py:146} INFO - Task exited with return code 1

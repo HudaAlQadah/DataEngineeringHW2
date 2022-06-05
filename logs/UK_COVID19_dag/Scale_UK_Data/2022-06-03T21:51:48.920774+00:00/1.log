@@ -1,0 +1,22 @@
+[2022-06-03 22:07:57,100] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: UK_COVID19_dag.Scale_UK_Data 2022-06-03T21:51:48.920774+00:00 [queued]>
+[2022-06-03 22:07:57,165] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: UK_COVID19_dag.Scale_UK_Data 2022-06-03T21:51:48.920774+00:00 [queued]>
+[2022-06-03 22:07:57,175] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-03 22:07:57,176] {taskinstance.py:1043} INFO - Starting attempt 1 of 2
+[2022-06-03 22:07:57,177] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-03 22:07:57,270] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): Scale_UK_Data> on 2022-06-03T21:51:48.920774+00:00
+[2022-06-03 22:07:57,520] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'UK_COVID19_dag', 'Scale_UK_Data', '2022-06-03T21:51:48.920774+00:00', '--job-id', '13', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/covid_dag-checkpoint.py', '--cfg-path', '/tmp/tmpvdxuffk4', '--error-file', '/tmp/tmp8p6yv7yf']
+[2022-06-03 22:07:57,523] {standard_task_runner.py:77} INFO - Job 13: Subtask Scale_UK_Data
+[2022-06-03 22:07:57,522] {standard_task_runner.py:52} INFO - Started process 109 to run task
+[2022-06-03 22:07:58,411] {logging_mixin.py:104} INFO - Running <TaskInstance: UK_COVID19_dag.Scale_UK_Data 2022-06-03T21:51:48.920774+00:00 [running]> on host db1a6c3b41a0
+[2022-06-03 22:07:59,585] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Huda
+AIRFLOW_CTX_DAG_ID=UK_COVID19_dag
+AIRFLOW_CTX_TASK_ID=Scale_UK_Data
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-03T21:51:48.920774+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-03T21:51:48.920774+00:00
+[2022-06-03 22:08:19,308] {python.py:118} INFO - Done. Returned value was: None
+[2022-06-03 22:08:19,368] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=UK_COVID19_dag, task_id=Scale_UK_Data, execution_date=20220603T215148, start_date=20220603T220757, end_date=20220603T220819
+[2022-06-03 22:08:19,510] {taskinstance.py:1220} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-06-03 22:08:20,143] {local_task_job.py:146} INFO - Task exited with return code 0
